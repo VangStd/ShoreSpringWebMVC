@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+       
+<tiles-definitions>
+    <!--user-->
+    <definition name="user" template="/WEB-INF/views/layouts/user/userlayout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="" />
+        <put-attribute name="menu" value="" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="" />
+    </definition>
+    
+    <definition name="index" extends="user">
+        <put-attribute name="body" value="/WEB-INF/views/user/index.jsp" />
+    </definition>
+    <definition name="about" extends="user">
+        <put-attribute name="body" value="/WEB-INF/views/user/about.jsp" />
+    </definition>
+    <definition name="shop" extends="user">
+        <put-attribute name="body" value="/WEB-INF/views/user/shop.jsp" />
+    </definition>
+    <definition name="contact" extends="user">
+        <put-attribute name="body" value="/WEB-INF/views/user/contact.jsp" />
+    </definition>
+    <definition name="singin" extends="user">
+        <put-attribute name="body" value="/WEB-INF/views/user/singin.jsp" />
+    </definition>
+    <definition name="register" extends="user">
+        <put-attribute name="body" value="/WEB-INF/views/user/register.jsp" />
+    </definition>
+    <definition name="profile" extends="user">
+        <put-attribute name="body" value="/WEB-INF/views/user/profile.jsp" />
+    </definition>
+    <definition name="changepass" extends="user">
+        <put-attribute name="body" value="/WEB-INF/views/user/changepassword.jsp" />
+    </definition>
+    <definition name="shop_detail" extends="user">
+        <put-attribute name="body" value="/WEB-INF/views/user/shop-detail.jsp" />
+    </definition>
+    <definition name="shop_cart" extends="user">
+        <put-attribute name="body" value="/WEB-INF/views/user/shopcart.jsp" />
+    </definition>
+    <definition name="sigle_order" extends="user">
+        <put-attribute name="body" value="/WEB-INF/views/user/sigleorder.jsp" />
+    </definition>
+    
+    <definition name="forgot_pass" extends="user">
+        <put-attribute name="body" value="/WEB-INF/views/user/forgotpassword.jsp" />
+    </definition>
+    <definition name="confirm_forgot_pass" extends="user">
+        <put-attribute name="body" value="/WEB-INF/views/user/confirmcode.jsp" />
+    </definition>
+    <definition name="newpass_forgot_pass" extends="user">
+        <put-attribute name="body" value="/WEB-INF/views/user/newpassforgot.jsp" />
+    </definition>
+    <definition name="myorder" extends="user">
+        <put-attribute name="body" value="/WEB-INF/views/user/myorder.jsp" />
+    </definition>
+
+    <!---        admin            -->
+    <definition name="admin" template="/WEB-INF/views/layouts/admin/adminlayout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="" />
+        <put-attribute name="menu" value="" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="" />
+    </definition>
+    <definition name="ad_index" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/index.jsp" />
+    </definition>
+    
+    <definition name="ad_customer" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/customer/customer.jsp" />
+    </definition>
+    <definition name="ad_form_cr_customer" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/customer/create_customer.jsp" />
+    </definition>
+    <definition name="ad_form_ed_customer" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/customer/edit_customer.jsp" />
+    </definition>
+    
+    <definition name="ad_supplier" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/supplier/supplier.jsp" />
+    </definition>
+    <definition name="ad_form_cr_supplier" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/supplier/create_supplier.jsp" />
+    </definition>
+    <definition name="ad_form_ed_supplier" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/supplier/edit_supplier.jsp" />
+    </definition>
+    
+    <definition name="ad_categorie" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/categorie/categorie.jsp" />
+    </definition>
+    <definition name="ad_form_cr_categorie" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/categorie/create_categorie.jsp" />
+    </definition>
+    <definition name="ad_form_ed_categorie" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/categorie/edit_categorie.jsp" />
+    </definition>
+    
+    <definition name="ad_product" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/product/product.jsp" />
+    </definition>
+    <definition name="ad_form_cr_product" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/product/create_product.jsp" />
+    </definition>
+    <definition name="ad_form_ed_product" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/product/edit_product.jsp" />
+    </definition>
+    
+    <definition name="ad_productimg" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/productimage/productimg.jsp" />
+    </definition>
+    <definition name="ad_form_ed_productimg" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/productimage/edit_productimg.jsp" />
+    </definition>
+    
+    <definition name="ad_saleoff" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/saleoff/saleoff.jsp" />
+    </definition>
+    <definition name="ad_form_cr_saleoff" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/saleoff/create_saleoff.jsp" />
+    </definition>
+    <definition name="ad_form_ed_saleoff" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/saleoff/edit_saleoff.jsp" />
+    </definition>
+    <definition name="ad_shopingcart" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/shopingcart/shopingcart.jsp" />
+    </definition>
+    
+    <definition name="ad_changepassword" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/changepassword.jsp" />
+    </definition>
+    <definition name="ad_profile" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/profile.jsp" />
+    </definition>
+    <definition name="ad_order" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/order/order.jsp" />
+    </definition>
+</tiles-definitions>
