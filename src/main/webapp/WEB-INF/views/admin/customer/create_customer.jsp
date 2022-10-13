@@ -9,7 +9,7 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <div class="container" style="padding-top: 20px;padding-bottom: 50px;">
     <div class="row">
-        <div class="">
+        <div class="col-lg-8">
             <div class="">
                 <form:form action="/ProjectShore/admin/add-customer" method="post" modelAttribute="customer">
                     <div class="form-group">
@@ -25,13 +25,11 @@
                         <form:input path="Email" cssClass="form-control" type="email"  />
                         <form:errors path="Email" cssClass="errHibernate" />
                     </div>
-                    <%
-                        if (request.getAttribute("errRegister3") != null) { %>
-                    <div class="alert alert-danger form-control">
-                        <strong>!</strong> Username Exist
-                    </div>
-                    <% }
-                    %>
+                    <c:if test="${errRegister3!=null}">
+                        <div class="alert alert-danger form-control">
+                            <strong>!</strong> Email Exist
+                        </div>
+                    </c:if>
                     <div class="form-group">
                         <label class="control-label" for="signupName">Gender</label>
                         <div><form:radiobutton path="Gender" value="0" label="" />&nbsp;Male&nbsp;&nbsp;<form:radiobutton path="Gender" value="1" label=""  />&nbsp;Female</div>  
@@ -41,13 +39,11 @@
                         <form:input path="UserName" cssClass="form-control"  />
                         <form:errors path="UserName" cssClass="errHibernate" />
                     </div>
-                    <%
-                        if (request.getAttribute("errRegister2") != null) { %>
-                    <div class="alert alert-danger form-control">
-                        <strong>!</strong> Username Exist
-                    </div>
-                    <% }
-                    %>
+                    <c:if test="${errRegister2!=null}">
+                        <div class="alert alert-danger form-control">
+                            <strong>!</strong> Username Exist
+                        </div>
+                    </c:if>
                     <div class="form-group">
                         <label class="control-label" for="signupPassword">Password</label>
                         <form:password path="PassWord" cssClass="form-control"  />

@@ -1,9 +1,3 @@
-<%-- 
-    Document   : image
-    Created on : Aug 12, 2022, 9:00:13 PM
-    Author     : kyqua
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!-- Row start -->
@@ -12,7 +6,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <h5 class="card-header-text">Color Accordion</h5>
+                <h5 class="card-header-text">Image Product</h5>
             </div>
             <div class="card-block accordion-block color-accordion-block">
                 <br>

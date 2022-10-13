@@ -31,7 +31,7 @@
         </c:when>
         <c:otherwise>
             <div class="alert alert-danger form-control">
-                <strong>!</strong> DateBegin Not Valid
+                <strong>!</strong> BeginDate Not Valid
             </div>
         </c:otherwise>
     </c:choose>
@@ -45,7 +45,7 @@
         </c:when>
         <c:otherwise>
             <div class="alert alert-danger form-control">
-                <strong>!</strong> DateEnd must greater today 
+                <strong>!</strong> EndDate must greater today 
             </div>
         </c:otherwise>
     </c:choose>

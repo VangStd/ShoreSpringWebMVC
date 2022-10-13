@@ -6,21 +6,18 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <form:form action="/ProjectShore/admin/add-supplier" method="post" modelAttribute="supplier">
     <div class="mb-3 mt-3">
         <label>Company Name</label>
         <form:input path="CompanyName" cssClass="form-control"  />
         <form:errors path="CompanyName" cssClass="errHibernate" />
-        <%
-            if (request.getAttribute("errSup1") != null) { %>
-        <div class="alert alert-danger form-control">
-            <strong>!</strong> CompanyName Exist
-        </div>
-        <% }
-        %>
+        <c:if test="${errSup1!=null}">
+            <div class="alert alert-danger form-control">
+                <strong>!</strong> CompanyName Exist
+            </div>
+        </c:if>
     </div>
-
     <div class="mb-3">
         <label>Address</label>
         <form:input path="Address" cssClass="form-control"  />

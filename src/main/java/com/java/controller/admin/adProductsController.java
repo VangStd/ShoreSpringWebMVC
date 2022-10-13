@@ -50,7 +50,7 @@ public class adProductsController {
     private Cloudinary cloudinary;
 
     @GetMapping("/admin/page-product")
-    public String Index(Model model, HttpServletRequest request) {
+    public String homeProduct(Model model, HttpServletRequest request) {
         if (request.getSession().getAttribute("adminSession") == null) {
             return "redirect:/form-login";
         } else {
@@ -61,7 +61,7 @@ public class adProductsController {
     }
 
     @GetMapping("/admin/add-product")
-    public String Create(Model model, HttpServletRequest request) {
+    public String addProduct(Model model, HttpServletRequest request) {
         if (request.getSession().getAttribute("adminSession") == null) {
             return "redirect:/form-login";
         } else {
@@ -77,12 +77,12 @@ public class adProductsController {
     }
 
     @PostMapping("/admin/add-product")
-    public String Create(@Valid @ModelAttribute("product") ProductEntity product, BindingResult br, Model model, HttpServletRequest request) throws IOException {
+    public String addProduct(@Valid @ModelAttribute("product") ProductEntity product, BindingResult br, Model model, HttpServletRequest request) throws IOException {
         return nonCreate(product, br, model, request);
     }
 
     @GetMapping("/admin/edit-product")
-    public String Edit(Model model, HttpServletRequest request) {
+    public String editProduct(Model model, HttpServletRequest request) {
         if (request.getSession().getAttribute("adminSession") == null) {
             return "redirect:/form-login";
         } else {
@@ -98,12 +98,12 @@ public class adProductsController {
     }
 
     @PostMapping("/admin/edit-product")
-    public String Edit(@Valid @ModelAttribute("product") ProductEntity product, BindingResult br, Model model, HttpServletRequest request) throws IOException {
+    public String editProduct(@Valid @ModelAttribute("product") ProductEntity product, BindingResult br, Model model, HttpServletRequest request) throws IOException {
         return nonEdit(product, br, model, request);
     }
 
     @GetMapping("/admin/delete-product")
-    public String Delete(HttpServletRequest request) throws IOException {
+    public String deleteProduct(HttpServletRequest request) throws IOException {
         long ProID = Long.parseLong(request.getParameter("ProID"));
         String Id = request.getParameter("ProID");
         cloudinary.uploader().destroy(Id, ObjectUtils.asMap("public_id", Id));

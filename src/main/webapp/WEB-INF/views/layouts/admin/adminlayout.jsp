@@ -8,19 +8,10 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
-
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-        <title>Mega Able bootstrap admin template by codedthemes </title>
-        <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 10]>
-          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-          <![endif]-->
-        <!-- Meta -->
+        <title>Admin Shop Shore</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -48,11 +39,8 @@
         <!-- Style.css -->
         <link rel="stylesheet" type="text/css" href="<c:url value="/assets/admin/assets/css/style.css"/>">
         <link rel="stylesheet" type="text/css" href="<c:url value="/assets/admin/assets/css/validatorHibernate.css"/>">
-
     </head>
-
     <body>
-
         <!-- Pre-loader start -->
         <div class="theme-loader">
             <div class="loader-track">
@@ -321,117 +309,6 @@
                                         </ul>
                                     </li>
                                 </ul>
-                                <div class="pcoded-navigation-label" data-i18n="nav.category.forms">Forms &amp; Tables</div>
-                                <ul class="pcoded-item pcoded-left-item">
-                                    <li>
-                                        <a href="form-elements-component.html" class="waves-effect waves-dark">
-                                            <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Form Components</span>
-                                            <span class="pcoded-mcaret"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="bs-basic-table.html" class="waves-effect waves-dark">
-                                            <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Basic Table</span>
-                                            <span class="pcoded-mcaret"></span>
-                                        </a>
-                                    </li>
-
-                                </ul>
-
-                                <div class="pcoded-navigation-label" data-i18n="nav.category.forms">Chart &amp; Maps</div>
-                                <ul class="pcoded-item pcoded-left-item">
-                                    <li>
-                                        <a href="chart.html" class="waves-effect waves-dark">
-                                            <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Chart</span>
-                                            <span class="pcoded-mcaret"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="map-google.html" class="waves-effect waves-dark">
-                                            <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Maps</span>
-                                            <span class="pcoded-mcaret"></span>
-                                        </a>
-                                    </li>
-                                    <li class="pcoded-hasmenu">
-                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                            <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
-                                            <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Pages</span>
-                                            <span class="pcoded-mcaret"></span>
-                                        </a>
-                                        <ul class="pcoded-submenu">
-                                            <li class=" ">
-                                                <a href="auth-normal-sign-in.html" class="waves-effect waves-dark">
-                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                    <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Login</span>
-                                                    <span class="pcoded-mcaret"></span>
-                                                </a>
-                                            </li>
-                                            <li class=" ">
-                                                <a href="auth-sign-up.html" class="waves-effect waves-dark">
-                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                    <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Register</span>
-                                                    <span class="pcoded-mcaret"></span>
-                                                </a>
-                                            </li>
-                                            <li class=" ">
-                                                <a href="sample-page.html" class="waves-effect waves-dark">
-                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                    <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Sample Page</span>
-                                                    <span class="pcoded-mcaret"></span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                </ul>
-
-                                <div class="pcoded-navigation-label" data-i18n="nav.category.other">Other</div>
-                                <ul class="pcoded-item pcoded-left-item">
-                                    <li class="pcoded-hasmenu ">
-                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                            <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
-                                            <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Menu Levels</span>
-                                            <span class="pcoded-mcaret"></span>
-                                        </a>
-                                        <ul class="pcoded-submenu">
-                                            <li class="">
-                                                <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                    <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-21">Menu Level 2.1</span>
-                                                    <span class="pcoded-mcaret"></span>
-                                                </a>
-                                            </li>
-                                            <li class="pcoded-hasmenu ">
-                                                <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                                    <span class="pcoded-micon"><i class="ti-direction-alt"></i></span>
-                                                    <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-22.main">Menu Level 2.2</span>
-                                                    <span class="pcoded-mcaret"></span>
-                                                </a>
-                                                <ul class="pcoded-submenu">
-                                                    <li class="">
-                                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                            <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-22.menu-level-31">Menu Level 3.1</span>
-                                                            <span class="pcoded-mcaret"></span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="">
-                                                <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                    <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-23">Menu Level 2.3</span>
-                                                    <span class="pcoded-mcaret"></span>
-                                                </a>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                </ul>
                             </div>
                         </nav>
                         <div class="pcoded-content">
@@ -442,13 +319,13 @@
                                         <div class="col-md-8">
                                             <div class="page-header-title">
                                                 <h5 class="m-b-10">Dashboard</h5>
-                                                <p class="m-b-0">Welcome to Mega Able</p>
+                                                <p class="m-b-0">Welcome to Shop Shore</p>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <ul class="breadcrumb-title">
                                                 <li class="breadcrumb-item">
-                                                    <a href="index.html"> <i class="fa fa-home"></i> </a>
+                                                    <a href="/ProjectShore/admin/home-admin"> <i class="fa fa-home"></i> </a>
                                                 </li>
                                                 <li class="breadcrumb-item"><a href="#!">Dashboard</a>
                                                 </li>
@@ -460,7 +337,6 @@
                             <!-- Page-header end -->
                             <div class="pcoded-inner-content">
                                 <div class="container">
-
                                 </div>
                                 <!-- Main-body start -->
                                 <div class="main-body">
@@ -479,7 +355,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Required Jquery -->
         <script type="text/javascript" src="<c:url value="/assets/admin/assets/js/jquery/jquery.min.js"/>"></script>
         <script type="text/javascript" src="<c:url value="/assets/admin/assets/js/jquery-ui/jquery-ui.min.js"/>"></script>

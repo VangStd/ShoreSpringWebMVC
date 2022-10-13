@@ -1,9 +1,3 @@
-<%-- 
-    Document   : create_productimg
-    Created on : Aug 12, 2022, 9:10:04 PM
-    Author     : kyqua
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <form:form action="/ProjectShore/admin/edit-imgproduct" method="post" modelAttribute="product" enctype="multipart/form-data">

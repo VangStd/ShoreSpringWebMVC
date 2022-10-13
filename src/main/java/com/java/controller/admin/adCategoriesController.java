@@ -28,7 +28,7 @@ public class adCategoriesController {
     private CategorieService categorieService;
 
     @GetMapping("/admin/page-categorie")
-    public String Index(Model model, HttpServletRequest request) {
+    public String homeCategorie(Model model, HttpServletRequest request) {
         if (request.getSession().getAttribute("adminSession") == null) {
             return "redirect:/form-login";
         } else {
@@ -39,7 +39,7 @@ public class adCategoriesController {
     }
 
     @GetMapping("/admin/add-categorie")
-    public String Create(Model model, HttpServletRequest request) {
+    public String addCategorie(Model model, HttpServletRequest request) {
         if (request.getSession().getAttribute("adminSession") == null) {
             return "redirect:/form-login";
         } else {
@@ -50,7 +50,7 @@ public class adCategoriesController {
     }
 
     @PostMapping("/admin/add-categorie")
-    public String Create(@Valid @ModelAttribute("categorie") CategorieEntity categorie, BindingResult br, HttpServletRequest request) {
+    public String addCategorie(@Valid @ModelAttribute("categorie") CategorieEntity categorie, BindingResult br, HttpServletRequest request) {
         if (br.hasErrors()) {
             return "ad_form_cr_categorie";
         } else {
@@ -65,7 +65,7 @@ public class adCategoriesController {
     }
 
     @GetMapping("/admin/edit-categorie")
-    public String Edit(Model model, HttpServletRequest request) {
+    public String editCategorie(Model model, HttpServletRequest request) {
         if (request.getSession().getAttribute("adminSession") == null) {
             return "redirect:/form-login";
         } else {
@@ -77,7 +77,7 @@ public class adCategoriesController {
     }
 
     @PostMapping("/admin/edit-categorie")
-    public String Edit(@Valid @ModelAttribute("categorie") CategorieEntity categorie, BindingResult br, HttpServletRequest request, Model model) {
+    public String editCategorie(@Valid @ModelAttribute("categorie") CategorieEntity categorie, BindingResult br, HttpServletRequest request, Model model) {
         if (br.hasErrors()) {
             return "ad_form_ed_categorie";
         } else {
@@ -101,7 +101,7 @@ public class adCategoriesController {
     }
 
     @GetMapping("/admin/delete-categorie")
-    public String Delete(HttpServletRequest request) {
+    public String deleteCategorie(HttpServletRequest request) {
         long ID = Long.parseLong(request.getParameter("CateID"));
         categorieService.deleteById(ID);
         return "redirect:/admin/page-categorie";

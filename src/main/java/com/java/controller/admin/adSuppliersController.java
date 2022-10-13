@@ -28,7 +28,7 @@ public class adSuppliersController {
     private SupplierService supplierService;
 
     @GetMapping("/admin/page-supplier")
-    public String Index(Model model, HttpServletRequest request) {
+    public String homeSupplier(Model model, HttpServletRequest request) {
         if (request.getSession().getAttribute("adminSession") == null) {
             return "redirect:/form-login";
         } else {
@@ -39,7 +39,7 @@ public class adSuppliersController {
     }
 
     @GetMapping("/admin/add-supplier")
-    public String Create(Model model, HttpServletRequest request) {
+    public String addSupplier(Model model, HttpServletRequest request) {
         if (request.getSession().getAttribute("adminSession") == null) {
             return "redirect:/form-login";
         }
@@ -49,7 +49,7 @@ public class adSuppliersController {
     }
 
     @PostMapping("/admin/add-supplier")
-    public String Create(@Valid @ModelAttribute("supplier") SupplierEntity supplier, BindingResult br, HttpServletRequest request) {
+    public String addSupplier( @ModelAttribute("supplier")@Valid SupplierEntity supplier, BindingResult br, HttpServletRequest request) {
         if (br.hasErrors()) {
             return "ad_form_cr_supplier";
         }
@@ -63,7 +63,7 @@ public class adSuppliersController {
     }
 
     @GetMapping("/admin/edit-supplier")
-    public String Edit(Model model, HttpServletRequest request) {
+    public String editSupplier(Model model, HttpServletRequest request) {
         if (request.getSession().getAttribute("adminSession") == null) {
             return "redirect:/form-login";
         }
@@ -74,7 +74,7 @@ public class adSuppliersController {
     }
 
     @PostMapping("/admin/edit-supplier")
-    public String Edit(@Valid @ModelAttribute("supplier") SupplierEntity supplier, BindingResult br, HttpServletRequest request, Model model) {
+    public String editSupplier( @ModelAttribute("supplier") @Valid SupplierEntity supplier, BindingResult br, HttpServletRequest request, Model model) {
         if (br.hasErrors()) {
 
             return "ad_form_ed_supplier";
@@ -87,7 +87,7 @@ public class adSuppliersController {
     }
 
     @GetMapping("/admin/delete-supplier")
-    public String Delete(HttpServletRequest request) {
+    public String deleteSupplier(HttpServletRequest request) {
         long SupID = Long.parseLong(request.getParameter("SupID"));
         supplierService.Delete(SupID);
         return "redirect:/admin/page-supplier";

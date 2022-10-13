@@ -6,7 +6,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <h5 class="card-header-text">Color Accordion</h5>
+                <h5 class="card-header-text">Home Product</h5>
             </div>
             <div class="card-block accordion-block color-accordion-block">
                 <a href="/ProjectShore/admin/add-product" class="btn btn-success">New Product</a>
@@ -25,7 +25,7 @@
                                     <th>UnitPrice</th>
                                     <th>UnitInStock</th>
                                     <th>UnitInOrder</th>
-                                    <th>Image</th>
+                                    <th class="disableFilterBy">Image</th>
                                     <th>StatusSale</th>
                                     <th class="disableFilterBy"></th>
                                 </tr>
@@ -37,7 +37,6 @@
                                         <td class="" id="">${item.getProductName()}</td>
                                         <td class="">${item.getSupplier().getCompanyName()}</td>
                                         <td class="">${item.getCategorie().getCateName()}</td>
-
                                         <td class="">${item.getUnitPrice()}</td>
                                         <td class="">${item.getUnitInStock()}</td>
                                         <td class="">${item.getUnitInOrder()}</td>

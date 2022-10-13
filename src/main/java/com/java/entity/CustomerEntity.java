@@ -21,6 +21,7 @@ import javax.validation.constraints.Pattern;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import org.hibernate.validator.constraints.Length;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
@@ -51,6 +52,7 @@ public class CustomerEntity implements Serializable {
     @Pattern(regexp = "[a-zA-Z]{1}[a-zA-Z0-9]{5,15}", message = "Username must begin character and than 6 ")
     private String UserName;
 
+    @Length(min = 7,message = "Password must has 7 character")
     private String PassWord;
 
     private String CodeForgot;

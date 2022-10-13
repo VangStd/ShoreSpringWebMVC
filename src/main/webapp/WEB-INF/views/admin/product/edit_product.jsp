@@ -1,9 +1,3 @@
-<%-- 
-    Document   : edit_product
-    Created on : Aug 11, 2022, 9:39:31 AM
-    Author     : kyqua
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -15,7 +9,6 @@
         <form:input path="ProductName" cssClass="form-control" readonly="true" />
         <form:errors path="ProductName" cssClass="errHibernate" />
     </div>
-
     <div class="mb-3 mt-3">
         <label for="email" class="form-label">SupplierID</label>
         <select name="SupID" class="form-control">
@@ -67,7 +60,6 @@
         <img src="${product.getImage()}" width="150" alt="" class="img-thumbnail"/>
         <input type="file" name="FileUpload" class="form-control" />
     </div>
-
     <button type="submit" class="btn btn-primary">Update</button>
 </form:form>
 

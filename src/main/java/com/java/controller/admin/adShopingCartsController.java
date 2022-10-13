@@ -24,7 +24,7 @@ public class adShopingCartsController {
     private ShopCartService cartService;
 
     @GetMapping("/admin/page-shopingcart")
-    public String Index(Model model, HttpServletRequest request) {
+    public String homeShoppingCart(Model model, HttpServletRequest request) {
         if (request.getSession().getAttribute("adminSession") == null) {
             return "redirect:/form-login";
         }
@@ -34,7 +34,7 @@ public class adShopingCartsController {
     }
 
     @GetMapping("/admin/delete-shopcart-by-id")
-    public String DeleteByID(HttpServletRequest request) {
+    public String deleteShoppingCart(HttpServletRequest request) {
         if (request.getSession().getAttribute("adminSession") == null) {
             return "redirect:/form-loginsadsad";
         }
@@ -44,7 +44,7 @@ public class adShopingCartsController {
     }
 
     @GetMapping("/admin/delete-all-shopcart-by-cusid")
-    public String DeleteAllByCusId(HttpServletRequest request) {
+    public String deleteAllShoppingCart(HttpServletRequest request) {
         if (request.getSession().getAttribute("adminSession") == null) {
             return "redirect:/form-loginnasdsa";
         }

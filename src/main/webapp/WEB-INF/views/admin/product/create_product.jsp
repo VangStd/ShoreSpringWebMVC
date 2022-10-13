@@ -1,26 +1,17 @@
-<%-- 
-    Document   : create_product
-    Created on : Aug 9, 2022, 2:14:02 PM
-    Author     : kyqua
---%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-
 <form:form action="/ProjectShore/admin/add-product" method="POST" modelAttribute="product" enctype="multipart/form-data" >
     <div class="mb-3 mt-3">
         <label for="email" class="form-label">Product Name</label>
         <form:input path="ProductName" cssClass="form-control" />
         <form:errors path="ProductName" cssClass="errHibernate" />
     </div>
-    <%
-        if (request.getAttribute("errAddPro1") != null) { %>
-    <div class="alert alert-danger form-control">
-        <strong>!</strong> ProductName Exist
-    </div>
-    <% }
-    %>
+    <c:if test="${errAddPro1!=null}">
+        <div class="alert alert-danger form-control">
+            <strong>!</strong> ProductName Exist
+        </div>
+    </c:if>
     <div class="mb-3 mt-3">
         <label for="email" class="form-label">SupplierID</label>
         <select name="SupID" class="form-control">
@@ -51,5 +42,5 @@
         <label for="email" class="form-label">Image</label>
         <input type="file" name="FileUpload" class="form-control" required />
     </div>
-        <input type="submit" class="btn btn-primary" value="Add"/>
+    <input type="submit" class="btn btn-primary" value="Add"/>
 </form:form>

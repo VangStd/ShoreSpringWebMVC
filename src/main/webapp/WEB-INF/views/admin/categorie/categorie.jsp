@@ -12,7 +12,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <h5 class="card-header-text">Color Accordion</h5>
+                <h5 class="card-header-text">Home Categories</h5>
             </div>
             <div class="card-block accordion-block color-accordion-block">
                 <a href="/ProjectShore/admin/add-categorie" class="btn btn-success">New Categorie</a>

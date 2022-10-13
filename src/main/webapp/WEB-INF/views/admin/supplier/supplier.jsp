@@ -1,9 +1,3 @@
-<%-- 
-    Document   : supplier
-    Created on : Aug 5, 2022, 9:41:29 AM
-    Author     : kyqua
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!-- Row start -->
@@ -12,7 +6,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <h5 class="card-header-text">Color Accordion</h5>
+                <h5 class="card-header-text">Home Supplier</h5>
             </div>
             <div class="card-block accordion-block color-accordion-block">
                 <a href="/ProjectShore/admin/add-supplier" class="btn btn-success">New Supplier</a>

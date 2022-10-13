@@ -36,14 +36,14 @@ public class adSaleOffsController {
     private ProductService productService;
     
     @GetMapping("/admin/page-saleoff")
-    public String Index(Model model) {
+    public String homeSaleOff(Model model) {
         List<SaleOffEntity> list = saleOffService.findAll();
         model.addAttribute("listSale", list);
         return "ad_saleoff";
     }
     
     @GetMapping("/admin/add-saleoffs")
-    public String Create(Model model, HttpServletRequest request) {
+    public String addSaleOff(Model model, HttpServletRequest request) {
         if (request.getSession().getAttribute("adminSession") == null) {
             return "redirect:/form-login";
         }
@@ -55,7 +55,7 @@ public class adSaleOffsController {
     }
     
     @PostMapping("/admin/save-add-saleoffs")
-    public String Create(@Valid @ModelAttribute("saleoff") SaleOffEntity entity, BindingResult br, HttpServletRequest request, Model model) throws ParseException, ParseException {
+    public String addSaleOff(@Valid @ModelAttribute("saleoff") SaleOffEntity entity, BindingResult br, HttpServletRequest request, Model model) throws ParseException, ParseException {
         if (br.hasErrors()) {
             List<ProductEntity> listPro = productService.findAllByStatusSaleEqual0();
             model.addAttribute("listPro", listPro);
@@ -98,7 +98,7 @@ public class adSaleOffsController {
     }
     
     @GetMapping("/admin/edit-saleoff")
-    public String Edit(Model model, HttpServletRequest request) {
+    public String editSaleOff(Model model, HttpServletRequest request) {
         long ID = Long.parseLong(request.getParameter("Id"));
         SaleOffEntity entity = saleOffService.findById(ID);
         model.addAttribute("sale", entity);
@@ -106,7 +106,7 @@ public class adSaleOffsController {
     }
     
     @PostMapping("/admin/edit-saleoff")
-    public String Edit(@Valid @ModelAttribute("sale") SaleOffEntity entity, BindingResult br, Model model, HttpServletRequest request) {
+    public String editSaleOff(@Valid @ModelAttribute("sale") SaleOffEntity entity, BindingResult br, Model model, HttpServletRequest request) {
         SaleOffEntity saleOff = saleOffService.findById(entity.getID());
         entity.setBeginDate(saleOff.getBeginDate());
         entity.setEndDate(saleOff.getEndDate());
@@ -133,7 +133,7 @@ public class adSaleOffsController {
     }
     
     @GetMapping("/admin/delete-saleoff")
-    public String Delete(HttpServletRequest request) {
+    public String deleteSaleOff(HttpServletRequest request) {
         long Id = Long.parseLong(request.getParameter("SaleID"));
         SaleOffEntity entity = saleOffService.findById(Id);
         productService.updateStatusSaleById(entity.getProducts().getProID());

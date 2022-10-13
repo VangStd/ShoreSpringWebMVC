@@ -39,14 +39,14 @@ public class adImageController {
     private Cloudinary cloudinary;
 
     @GetMapping("/admin/page-productimg")
-    public String Index(Model model) {
+    public String homeImgProduct(Model model) {
         List<ImageProductEntity> list = imgProductService.findAll();
         model.addAttribute("listImg", list);
         return "ad_productimg";
     }
 
     @GetMapping("/admin/edit-imgproduct")
-    public String Edit(Model model, HttpServletRequest request) {
+    public String editImgProduct(Model model, HttpServletRequest request) {
         long ProID = Long.parseLong(request.getParameter("idPro"));
         ImageProductEntity imageProductEntity = imgProductService.findByProId(ProID);
         model.addAttribute("ProID", imageProductEntity.getProducts().getProID());
@@ -55,7 +55,7 @@ public class adImageController {
     }
 
     @PostMapping("/admin/edit-imgproduct")
-    public String Edit(@ModelAttribute("product") ImageProductEntity entity, HttpServletRequest request) throws IOException {
+    public String editImgProduct(@ModelAttribute("product") ImageProductEntity entity, HttpServletRequest request) throws IOException {
         //
         long ProID = Long.parseLong(request.getParameter("ProID"));
         ProductEntity productEntity = productService.findById(ProID);
