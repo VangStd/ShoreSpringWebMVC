@@ -81,7 +81,6 @@
 </div>
 
 <script src="<c:url value="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"/>"></script>
-<!-- <script type="text/javascript" src="./js/jquery-1.12.3.min.js"></script> -->
 <script type="text/javascript" src="<c:url value="/assets/admin/assets/js/tableManager.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/assets/admin/assets/js/table.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/assets/js/button.js"/>"></script>
