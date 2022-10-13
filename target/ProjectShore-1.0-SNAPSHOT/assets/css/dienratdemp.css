@@ -1,0 +1,51 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jul 27, 2022, 7:52:47 PM
+    Author     : kyqua
+*/
+.divlogin{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+.h-custom {
+    height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+    .h-custom {
+        height: 100%;
+    }
+}
+
+/*error Hibernate*/
+.errHiber{
+    color: red;
+}
+
+/*tablecart*/
+.tabcartuser{
+    padding-top: 100px;
+}
+
+/*form edit*/
+.formcsspadding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#inputcheckboxshopcart {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+}
+
