@@ -46,7 +46,6 @@ com\java\entity\WhisListEntity.class
 com\java\service\impl\CustomerServiceimpl.class
 com\java\controller\admin\adSuppliersController.class
 com\java\entity\SupplierEntity.class
-.netbeans_automatic_build
 com\java\controller\admin\adProductsController.class
 com\java\entity\ShopCartEntity.class
 com\java\entity\ProductEntity.class
