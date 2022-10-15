@@ -1,0 +1,4 @@
+{
+    "appService.preDeployTask": "package:ProjectShore",
+    "appService.deploySubpath": "target/ProjectShore-1.0-SNAPSHOT.war"
+}
