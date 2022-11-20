@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author kyqua
  */
-@WebFilter(filterName = "Security", urlPatterns = {"/admin/"}, dispatcherTypes = {DispatcherType.REQUEST, DispatcherType.FORWARD, DispatcherType.ERROR, DispatcherType.INCLUDE})
+@WebFilter(filterName = "Security", urlPatterns = {"/admin/*"}, dispatcherTypes = {DispatcherType.REQUEST, DispatcherType.FORWARD, DispatcherType.ERROR, DispatcherType.INCLUDE})
 public class Security implements Filter {
 
     private static final boolean debug = true;
@@ -66,9 +66,6 @@ public class Security implements Filter {
 
     private void doAfterProcessing(ServletRequest request, ServletResponse response)
             throws IOException, ServletException {
-        if (((HttpServletRequest) request).getSession().getAttribute("adminSession") == null) {
-            ((HttpServletResponse) response).sendRedirect("form-login");
-        }
         if (debug) {
             log("Security:DoAfterProcessing");
         }
@@ -104,7 +101,9 @@ public class Security implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response,
             FilterChain chain)
             throws IOException, ServletException {
-
+        if (((HttpServletRequest) request).getSession().getAttribute("adminSession") == null) {
+            ((HttpServletResponse) response).sendRedirect("/ProjectShore/form-login");
+        }
         if (debug) {
             log("Security:doFilter()");
         }

@@ -1,9 +1,3 @@
-<%-- 
-    Document   : userlayout
-    Created on : Jul 27, 2022, 1:13:59 PM
-    Author     : kyqua
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
@@ -78,16 +72,16 @@
                     <div class="flex-fill">
                         <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="/ProjectShore/home">Home</a>
+                                <a class="nav-link" href="home">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/ProjectShore/about">About Us</a>
+                                <a class="nav-link" href="about">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/ProjectShore/shop">Shop</a>
+                                <a class="nav-link" href="shop">Shop</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/ProjectShore/contact">Contact</a>
+                                <a class="nav-link" href="contact">Contact</a>
                             </li>
                         </ul>
                     </div>
